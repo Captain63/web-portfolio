@@ -1,0 +1,26 @@
+/* Main stylesheet */
+
+/* Global CSS variable declarations */
+:root {
+    --accent: ;
+    --body-font: 'Merriweather', serif;
+    --heading-font: 'Shippori Mincho B1', serif;
+}
+
+/* Base styles for page */
+body {
+    font-family: var(--body-font);
+}
+
+/* Headings font declaration */
+h1,h2,h3 {
+    font-family: var(--heading-font);
+}
+
+/* Header styles */
+
+/* Nav styles */
+
+/* Main content styles */
+
+/* Footer styles */
