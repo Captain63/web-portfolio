@@ -90,17 +90,6 @@ figure {
     height: 500px;
 }
 
-figure .headshot {
-    border: 8px solid var(--maroon-accent);
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-    position: relative;
-    left: 180px;
-    top: 325px;
-    width: 250px;
-    height: auto;
-}
-
 /* Main content styles */
 main {
     padding: 65px 50px 0 50px;
@@ -112,10 +101,30 @@ main {
     background-attachment: fixed;
 }
 
-main h2.about-me {
-    position: relative;
+main .about-me {
+    display: grid;
+    grid-template: auto / 250px auto;
+    justify-items: start;
+    grid-column-gap: 30px;
+    align-items: end;
+    margin: -200px auto 30px auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+main .about-me .headshot {
+    border: 8px solid var(--maroon-accent);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+main .about-me h2 {
+    /* position: relative;
     left: 400px;
-    top: -36px;
+    top: -36px; */
     font-size: 250%;
     width: fit-content;
 }
@@ -141,3 +150,7 @@ main p:last-child {
 }
 
 /* Footer styles */
+footer {
+    background-color: #454545;
+    color: #fff;
+}
