@@ -33,9 +33,12 @@
             </section>
             <nav>
                 <ul>
-                    <li>About the Developer</li>
-                    <li>Selected Works</li>
-                    <li>Contact Me</li>
+                    <li class="link scroll-link">About the Developer</li>
+                    <li class="link scroll-link">Selected Works</li>
+                    <li class="link scroll-link">Contact Me</li>
+                    <!-- Update with Online Resume PDF -->
+                    <li class="link"><a href="" 
+                    target="_blank">Résumé</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,7 +53,7 @@
         <main>
             <!-- About bio -->
             <section>
-                <h2 class="about-me">About Me</h2>
+                <h2 class="about-me scroll-target">About Me</h2>
                 <p>
                     Since I was a young child, I have always had an obsession with lighthouses and the ocean at large (Exhibit A: the 40-count model lighthouse collection my grandparents curated for me). You might be wondering what that has to do with a developer portfolio, but as a life-long creative writer, I appreciate the power of a good metaphor. Lighthouses exist to cut through the darkness and guide mariners as they navigate treacherous waters. Such is the goal I aspire to with each web application and site I build. In a world of mediocre designs and unresponsive layouts, I strive for excellence in both presentation and functionality, a shining light through a sea of subpar experiences for the weary user. 
                 </p>
@@ -60,7 +63,7 @@
             </section>
             <!-- Work Samples grid -->
             <section>
-                <h2>Selected Works</h2>
+                <h2 class="selected-works scroll-target">Selected Works</h2>
                 <div class="grid">
                     <!-- Row 1 -->
                     <!-- Card 1; MFGS Leadership page -->
@@ -105,7 +108,7 @@
 
         <!-- Footer for contact information -->
         <footer>
-            <h2>Get in Touch</h2>
+            <h2 class="contact scroll-target">Get in Touch</h2>
             <!-- Contact Info flexbox -->
             <section>
                 <!-- Phone block -->
@@ -135,5 +138,9 @@
                 &copy; 2021 Stephen A. Roddewig
             </section>
         </footer>
+
+        <!-- scrollCursor Script Link -->
+        <script src="./Assets/scrollcursor.js" type="text/javascript"></script>
+        
     </body>
 </html>
