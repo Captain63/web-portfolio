@@ -353,18 +353,20 @@ footer .copyright {
     padding-bottom: 30px;
 }
 
-/* Start media query section */
+/* Start media queries */
 @media only screen and (max-width: 1120px) {
+    /* Adds top margin to separate from title card after flex wrap and aligns left with start of title card content */
     nav {
         margin-top: 15px;
         margin-left: 30px;
     }
 
+    /* Reduces padding on sides of Main */
     main {
         padding: 65px 30px 0 30px;
     }
 
-    /* Keeps H2 aligned with grid */
+    /* Keeps H2 aligned with Selected Works grid */
     main h2.selected-works {
         max-width: 700px;
     }
@@ -376,6 +378,7 @@ footer .copyright {
         row-gap: 40px;
     }
 
+    /* Centers background images for Selected Works cards and sets height */
     main .works-grid .card {
         background-position: center;
         height: 200px;
@@ -405,18 +408,22 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 800px) {
+    /* Adds top margin to nav lis to separate from first row after flex wrap */
     nav .link {
         margin-top: 10px;
     }
     
+    /* Reduces height of figure to keep background image more centered */
     figure {
         height: 400px;
     }
-        
+    
+    /* Removes side padding on Main */
     main {
         padding: 65px 0 0 0;
     }
 
+    /* Adjusts About Me grid to one column layout */
     main .about-me {
         grid-template: auto auto / 250px;
         justify-content: center;
@@ -424,22 +431,27 @@ footer .copyright {
         margin-bottom: 20px;
     }
 
+    /* Adds top margin now that H2 is positioned beneath headshot */
     main .about-me h2 {
         margin-top: 20px;
     }
 
+    /* Removes border rounding now that container stretches to both sides of viewport */
     main .gray-background {
         border-radius: 0px;
     }
 
+    /* Keeps H2 aligned with Selected Works grid */
     main h2.selected-works {
         max-width: 500px;
     }
 
+    /* Sets Selected Works grid to single column layout and reduces column width */
     main .works-grid {
         grid-template: repeat(5, auto) / 500px;
     }
 
+    /* Special height setting for featured work sample and removes two column span */
     main .works-grid #mfgs {
         height: 200px;
         grid-column: 1 / span 1;
@@ -447,45 +459,45 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 575px) {
+    /* Reduces height of figure to keep background image more centered */
     figure {
         height: 300px;
     }
 
+    /* Reduces headshot size for smaller screens */
     main .about-me .headshot {
-        border: 6px solid var(--maroon-accent);
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
         max-width: 200px;
-        width: 100%;
-        height: auto;
     }
 
+    /* Reduces font size for smaller screens */
     main .about-me h2 {
         font-size: 200%;
     }
 
+    /* Keeps H2 aligned with Selected Works grid and reduces font size for smaller screens */
     main h2.selected-works {
         font-size: 200%;
         max-width: 400px;
     }
 
+    /* Reduces column width of Selected Works grid */
     main .works-grid {
         grid-template-columns: 400px;
     }
 
+    /* Adjusts height of Selected Works card -- important added to override #mfgs selector */
     main .works-grid .card {
         height: 250px !important;
     }
 }
 
 @media only screen and (max-width: 460px) {
-    /* Create mobile menu */
-    
     /* Makes title card flush with top of viewport */
     header {
         padding: 0px;
     }
     
+    /* Sets title card display to grid so that menu icon can be positioned with title and tagline */
     header .nav-title {
         max-width: 460px;
         padding-top: 50px;
@@ -493,6 +505,7 @@ footer .copyright {
         grid-template: auto auto / auto 50px;
     }
 
+    /* Sets menu icon to display and sets styles */
     header .nav-title i {
         display: block;
         font-size: 300%;
@@ -501,12 +514,13 @@ footer .copyright {
         transition: color 0.25s;
     }
 
+    /* Hides nav so that menu.js event listener can toggle with .menu-open class */
     nav {
         display: none;
-        transition: 0.25s;
         margin-top: 0px;
     }
 
+    /* Sets nav lis to display vertically and removes existing spacing and text alignment */
     nav .link {
         display: block;
         margin-right: 0px;
@@ -514,71 +528,87 @@ footer .copyright {
         margin-bottom: 10px;
     }
 
+    /* Removes margin on last nav li */
     nav .link:last-child {
         margin-right: 0px;
     }
 
+    /* Class toggled by menu.js event listener to display mobile dropdown menu */
     .menu-open {
         display: block;
     }
 
+    /* Class toggled by menu.js event listener to show mobile menu icon has been clicked */
     .menu-icon-active {
         color: rgba(255, 255, 255, 0.5) !important;
     }
-    
+
+    /* Reduce height of figure to keep background image more centered */
     figure {
         height: 250px;
     }
 
+    /* Reduce negative margin on About Me grid to account for smaller figure */
     main .about-me {
         margin-top: -150px;
     }
 
-    main .gray-background {
+    /* Reduces font-size on bio paragraphs */
+    main .gray-background p {
         font-size: 100%;
     }
 
+    /* Centers H2 */
     main h2.selected-works {
         text-align: center;
     }
 
+    /* Sets Selected Works grid width to 100% of viewport -- removing fixed widths from earlier queries */
     main .works-grid {
         grid-template-columns: 100%;
     }
 
+    /* Adds more height to Selected Works grid cards than normally provided by the content inside the divs */
     main .works-grid .card {
         height: 120% !important;
     }
 
+    /* Reduces font-size of contact info boxes and centers text */
     footer .contact-info div {
         font-size: 100%;
         text-align: center;
     }
 
+    /* Toggles line break in email address for small screen sizes */
     footer .contact-info #email br {
         display: inline;
     }
 }
 
 @media only screen and (max-width: 400px) {
+    /* Reduce height of figure to keep background image more centered */
     figure {
         height: 200px;
     }
 
+    /* Reduce offset on About Me grid to account for lower height of figure */
     main .about-me {
         margin-top: -140px;
     }
 
+    /* Reduce headshot size for smaller screens */
     main .about-me .headshot {
         max-width: 150px;
     }
 }
 
 @media only screen and (max-width: 320px) {
+    /* Provides more space around outside of title card */    
     header .nav-title {
         padding: 50px 20px 30px 20px;
     }
     
+    /* Provides more space around outside of bio paragraphs */
     main .gray-background {
         padding: 20px;
     }
