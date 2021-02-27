@@ -5,10 +5,7 @@ const scrollCursor = () => {
     let scrollLinks = document.querySelectorAll(".scroll-link");
     let scrollTargets = document.querySelectorAll(".scroll-target");
 
-    /* let aboutMe = document.querySelector(".about-me");
-    let selectedWorks = document.querySelector(".selected-works");
-    let contact = document.querySelector(".contact"); */
-
+    /* Loop that assigns event listeners to nav links to scroll to targeted sections in DOM based off index values (1 to 1 relationship) */
     for (let i = 0; i < scrollLinks.length; i++) {
         scrollLinks[i].addEventListener("click", () => {
             scrollTargets[i].scrollIntoView({behavior: "smooth", block: "start"});        
@@ -16,4 +13,5 @@ const scrollCursor = () => {
     }
 }
 
+// Calls scrollCursor function at run time
 scrollCursor();
