@@ -57,6 +57,11 @@ header .nav-title {
     width: 100%;
 }
 
+/* Mobile menu icon for small screen sizes -- hidden */
+header .nav-title i {
+    display: none;
+}
+
 /* Callout tagline styles */
 header .tagline {
     color: #fff;
@@ -283,6 +288,7 @@ footer .contact-info {
     justify-content: center;
     width: fit-content;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Overwriting default font color for Footer anchor tags */
@@ -292,6 +298,7 @@ footer .contact-info a {
 
 /* Individual contact boxes styles */
 footer .contact-info div {
+    margin-top: 10px;
     margin-right: 100px;
     font-size: 130%;
 }
@@ -328,6 +335,11 @@ footer .contact-info .far {
     font-size: 120%;
 }
 
+/* Special style to allow line break on small screens */
+footer .contact-info #email br {
+    display: none;
+}
+
 /* Footer inspirational ending note styles */
 footer .ending-note {
     text-align: center;
@@ -342,3 +354,213 @@ footer .copyright {
 }
 
 /* Start media query section */
+@media only screen and (max-width: 1120px) {
+    nav {
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+
+    main {
+        padding: 65px 30px 0 30px;
+    }
+
+    /* Keeps H2 aligned with grid */
+    main h2.selected-works {
+        max-width: 700px;
+    }
+
+    /* Selected Works grid column sizing and spacing adjustment */
+    main .works-grid {
+        grid-template-columns: 320px 320px;
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+
+    main .works-grid .card {
+        background-position: center;
+        height: 200px;
+    }
+
+    /* Special height setting for featured work sample */
+    main .works-grid #mfgs {
+        height: 280px;
+    }
+
+    /* Centers Footer H2 */
+    footer h2 {
+        text-align: center;
+    }
+
+    /* Sets contact boxes to column and centers boxes */
+    footer .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Removes margin right and increases margin top for contact boxes */
+    footer .contact-info div {
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav ul li {
+        margin-top: 10px;
+    }
+    
+    figure {
+        height: 400px;
+    }
+        
+    main {
+        padding: 65px 0 0 0;
+    }
+
+    main .about-me {
+        grid-template: auto auto / 250px;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+
+    main .about-me h2 {
+        margin-top: 20px;
+    }
+
+    main .gray-background {
+        border-radius: 0px;
+    }
+
+    main h2.selected-works {
+        max-width: 500px;
+    }
+
+    main .works-grid {
+        grid-template: repeat(5, auto) / 500px;
+    }
+
+    main .works-grid #mfgs {
+        height: 200px;
+        grid-column: 1 / span 1;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    figure {
+        height: 300px;
+    }
+
+    main .about-me .headshot {
+        border: 6px solid var(--maroon-accent);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+    }
+
+    main .about-me h2 {
+        font-size: 200%;
+    }
+
+    main h2.selected-works {
+        font-size: 200%;
+        max-width: 400px;
+    }
+
+    main .works-grid {
+        grid-template-columns: 400px;
+    }
+
+    main .works-grid .card {
+        height: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    /* Create mobile menu */
+    
+    /* Makes title card flush with top of viewport */
+    header {
+        padding: 0px;
+    }
+    
+    header .nav-title {
+        max-width: 460px;
+        padding-top: 50px;
+        display: grid;
+        grid-template: auto auto / auto 50px;
+    }
+
+    header .nav-title i {
+        display: block;
+        font-size: 300%;
+        color: #fff;
+        margin-top: 8px;
+        transition: color 0.25s ease-in-out;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header .nav-title i:hover,
+    header .nav-title i:focus,
+    header .nav-title i:active {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    figure {
+        height: 250px;
+    }
+
+    main .about-me {
+        margin-top: -150px;
+    }
+
+    main .gray-background {
+        font-size: 100%;
+    }
+
+    main h2.selected-works {
+        text-align: center;
+    }
+
+    main .works-grid {
+        grid-template-columns: 100%;
+    }
+
+    main .works-grid .card {
+        height: 120% !important;
+    }
+
+    footer .contact-info div {
+        font-size: 100%;
+        text-align: center;
+    }
+
+    footer .contact-info #email br {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    figure {
+        height: 200px;
+    }
+
+    main .about-me {
+        margin-top: -140px;
+    }
+
+    main .about-me .headshot {
+        max-width: 150px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    main .gray-background {
+        padding: 20px;
+    }
+}
