@@ -68,16 +68,23 @@ nav ul li {
     display: inline-block;
     text-align: center;
     font-size: 125%;
-    padding-right: 25px;
+    margin-right: 25px;
 }
 
-.link {
+nav ul li:last-child {
+    margin-right: 50px;
+}
+
+nav .link,
+nav .link a {
+    color: #000;
     cursor: pointer;
     text-decoration: underline;
     transition: color 0.25s ease-in-out;
 }
 
-.link:hover {
+nav .link:hover,
+nav .link:hover a {
     color: rgba(0, 0, 0, 0.5);
 }
 
