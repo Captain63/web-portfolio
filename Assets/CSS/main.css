@@ -17,6 +17,7 @@ html {
 /* Base styles for page */
 body {
     font-family: var(--body-font);
+    line-height: 1.5;
 }
 
 /* Headings font declaration */
@@ -90,6 +91,17 @@ figure {
     height: 500px;
 }
 
+figure .headshot {
+    border: 8px solid var(--maroon-accent);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    position: relative;
+    left: 180px;
+    top: 325px;
+    width: 250px;
+    height: auto;
+}
+
 /* Main content styles */
 main {
     padding: 65px 50px 0 50px;
@@ -122,9 +134,6 @@ main .about-me .headshot {
 }
 
 main .about-me h2 {
-    /* position: relative;
-    left: 400px;
-    top: -36px; */
     font-size: 250%;
     width: fit-content;
 }
@@ -139,18 +148,93 @@ main .gray-background {
     margin: 0 auto;
 }
 
-main p {
+main .gray-background p {
     margin-bottom: 20px;
-    line-height: 1.5;
     font-size: 110%;
 }
 
-main p:last-child {
+main .gray-background p:last-child {
     margin-bottom: 0px;
 }
 
+main .selected-works {
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+main .works-grid {
+    display: grid;
+    justify-content: center;
+    grid-template: repeat(3, auto) / 470px 470px;
+    column-gap: 60px;
+    row-gap: 40px;
+    padding-bottom: 40px;
+}
+
+main .works-grid .card {
+    height: 235px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid var(--purple-accent);
+    border-radius: 5px;
+}
+
+main .works-grid .card div {
+    height: 100%;
+}
+
+main .works-grid .card a {
+   text-decoration: none;
+}
+
+main .works-grid h3 {
+    font-size: 130%;
+    padding: 15px;
+}
+
+main .works-grid p {
+    padding: 0 15px 15px;
+}
+
+main .works-grid p,
+main .works-grid h3 {
+    opacity: 0;
+    color: var(--purple-accent);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: opacity 0.75s;
+}
+
+main .works-grid div:hover p, 
+main .works-grid div:hover h3 {
+    opacity: 100%;
+}
+
+main .works-grid #mfgs {
+    grid-column: 1 / span 2;
+    height: 400px;
+    background-image: url('./../Images/MFGS-Leadership-1000.png');
+}
+
+main .works-grid #fnn {
+    background-image: url('./../Images/FNN-Partners-470.png');
+}
+
+main .works-grid #css-snippet {
+    background-image: url('./../Images/CSS-Snippet-470.png');
+}
+
+main .works-grid #govforward {
+    background-image: url('./../Images/GovForward-470.png');
+}
+
+main .works-grid #compendium {
+    background-image: url('./../Images/2020-Compendium-470.png');
+}
+
+
 /* Footer styles */
 footer {
-    background-color: #454545;
+    background-color: var(--purple-accent);
     color: #fff;
 }
