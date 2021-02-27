@@ -76,7 +76,7 @@ nav {
 }
 
 /* Sets list items to display side by side */
-nav ul li {
+nav .link {
     display: inline-block;
     text-align: center;
     font-size: 125%;
@@ -84,7 +84,7 @@ nav ul li {
 }
 
 /* Increases right margin on final list item for more offset from page edge */
-nav ul li:last-child {
+nav .link:last-child {
     margin-right: 50px;
 }
 
@@ -405,7 +405,7 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 800px) {
-    nav ul li {
+    nav .link {
         margin-top: 10px;
     }
     
@@ -498,17 +498,32 @@ footer .copyright {
         font-size: 300%;
         color: #fff;
         margin-top: 8px;
-        transition: color 0.25s ease-in-out;
+        transition: color 0.25s;
     }
 
     nav {
         display: none;
+        transition: 0.25s;
+        margin-top: 0px;
     }
 
-    header .nav-title i:hover,
-    header .nav-title i:focus,
-    header .nav-title i:active {
-        color: rgba(255, 255, 255, 0.5);
+    nav .link {
+        display: block;
+        margin-right: 0px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    nav .link:last-child {
+        margin-right: 0px;
+    }
+
+    .menu-open {
+        display: block;
+    }
+
+    .menu-icon-active {
+        color: rgba(255, 255, 255, 0.5) !important;
     }
     
     figure {
@@ -560,6 +575,10 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 320px) {
+    header .nav-title {
+        padding: 50px 20px 30px 20px;
+    }
+    
     main .gray-background {
         padding: 20px;
     }
