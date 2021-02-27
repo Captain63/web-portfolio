@@ -21,6 +21,9 @@
 
         <!-- Shippori Mincho B1 heading font link -->
         <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet"> 
+
+        <!-- Font Awesome link -->
+        <script src="https://kit.fontawesome.com/3aa713bd16.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Header flexbox for intro and nav links -->
@@ -102,7 +105,7 @@
                         </a>
                     </div>
 
-                    <!-- Row 3 -->
+                    <!-- Row 3 (on desktop) -->
                     <!-- Card 4 -->
                     <div class="card" id="govforward">
                         <a href="https://www.carahsoft.com/govforward-supply-chain" target="_blank">
@@ -130,31 +133,34 @@
         <footer>
             <h2 class="contact scroll-target">Get in Touch</h2>
             <!-- Contact Info flexbox -->
-            <section>
+            <section class="contact-info">
                 <!-- Phone block -->
-                <div>
+                <div id="phone">
                     (555) 555-5555
                 </div>
                 
                 <!-- Email block -->
-                <div>
+                <div id="email">
+                    <i class="far fa-envelope"></i>
                     <a href="mailto:stephen.roddewig@example.com">stephen.roddewig@example.com</a>
                 </div>
 
                 <!-- GitHub block -->
-                <div>
+                <div id="github">
+                    <i class="fab fa-github"></i>
                     <a href="https://github.com/Captain63" target="_blank">GitHub profile</a>
                 </div>
 
                 <!-- LinkedIn block -->
-                <div>
+                <div id="linkedin">
+                    <i class="fab fa-linkedin"></i>
                     <a href="https://www.linkedin.com/in/stephen-roddewig-880353b5/" target="_blank">LinkedIn profile</a>
                 </div>
             </section>
-            <section id="ending-note">
+            <section class="ending-note">
                 Keep the lights burning
             </section>
-            <section id="copyright">
+            <section class="copyright">
                 &copy; 2021 Stephen A. Roddewig
             </section>
         </footer>

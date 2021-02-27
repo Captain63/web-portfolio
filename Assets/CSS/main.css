@@ -231,10 +231,74 @@ main .works-grid #govforward {
 main .works-grid #compendium {
     background-image: url('./../Images/2020-Compendium-470.png');
 }
-
+/* END Main content styles */
 
 /* Footer styles */
 footer {
     background-color: var(--purple-accent);
     color: #fff;
+}
+
+footer h2 {
+    max-width: 1270px;
+    width: 100%;
+    padding-top: 20px;
+    margin: 0 auto 10px auto;
+}
+
+footer .contact-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer .contact-info a {
+    color: #fff;
+}
+
+/* Individual contact boxes */
+footer .contact-info div {
+    margin-right: 100px;
+    font-size: 130%;
+}
+
+footer .contact-info div:last-child {
+    margin-right: 0px;
+}
+
+footer .contact-info div a,
+footer .contact-info div i {
+    transition: color 0.25s;
+}
+
+footer .contact-info div:hover a,
+footer .contact-info div:hover i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .contact-info #phone::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f879";
+    padding-right: 10px;
+}
+
+footer .contact-info .fab,
+footer .contact-info .far {
+    padding-right: 10px;
+    font-size: 120%;
+}
+
+footer .ending-note {
+    text-align: center;
+    font-size: 120%;
+    margin: 40px auto 30px auto;
+}
+
+footer .copyright {
+    text-align: center;
+    padding-bottom: 30px;
 }
