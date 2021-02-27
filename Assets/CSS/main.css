@@ -10,11 +10,12 @@
     --heading-font: 'Shippori Mincho B1', serif;
 }
 
+/* Base styles for page */
 html {
     min-height: 100%;
 }
 
-/* Base styles for page */
+/* Base styles for html body */
 body {
     font-family: var(--body-font);
     line-height: 1.5;
@@ -25,11 +26,12 @@ h1,h2,h3 {
     font-family: var(--heading-font);
 }
 
+/* H2 size declaration */
 h2 {
-    font-size: 180%;
+    font-size: 250%;
 }
 
-/* Header styles */
+/* Header styles and flexbox declaration + properties */
 header {
     display: flex;
     padding: 30px 0;
@@ -40,11 +42,13 @@ header {
     background: linear-gradient(180deg, #839fe6 , var(--background));
 }
 
+/* Header H1 styles */
 header h1 {
     font-size: 200%;
     color: var(--pink-accent);
 }
 
+/* Stephen A. Roddewig callout styles */
 header .nav-title {
     background-color: var(--purple-accent);
     padding: 30px;
@@ -53,10 +57,12 @@ header .nav-title {
     width: 100%;
 }
 
+/* Callout tagline styles */
 header .tagline {
     color: #fff;
     padding-top: 15px;
 }
+/* END Header styles */
 
 /* Nav styles */
 nav {
@@ -64,6 +70,7 @@ nav {
     width: fit-content;
 }
 
+/* Sets list items to display side by side */
 nav ul li {
     display: inline-block;
     text-align: center;
@@ -71,10 +78,12 @@ nav ul li {
     margin-right: 25px;
 }
 
+/* Increases right margin on final list item for more offset from page edge */
 nav ul li:last-child {
     margin-right: 50px;
 }
 
+/* Setting styles and transition on link class and overwriting anchor text native styles */
 nav .link,
 nav .link a {
     color: #000;
@@ -83,10 +92,12 @@ nav .link a {
     transition: color 0.25s ease-in-out;
 }
 
+/* Setting hover effects for nav list item "links" */
 nav .link:hover,
 nav .link:hover a {
     color: rgba(0, 0, 0, 0.5);
 }
+/* END Header styles */
 
 /* Main banner styles */
 figure {
@@ -98,28 +109,18 @@ figure {
     height: 500px;
 }
 
-figure .headshot {
-    border: 8px solid var(--maroon-accent);
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-    position: relative;
-    left: 180px;
-    top: 325px;
-    width: 250px;
-    height: auto;
-}
-
 /* Main content styles */
 main {
     padding: 65px 50px 0 50px;
-    /* Alternate ending value 4770da */
-    background: linear-gradient(180deg, var(--background), #839fe6);
+    background: linear-gradient(180deg, var(--background), #4770da);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
+    /* Makes gradient background follow viewport scrolling */
     background-attachment: fixed;
 }
 
+/* About Me card (headshot and H2) styles */
 main .about-me {
     display: grid;
     grid-template: auto / 250px auto;
@@ -131,6 +132,7 @@ main .about-me {
     width: 100%;
 }
 
+/* Headshot styles */
 main .about-me .headshot {
     border: 8px solid var(--maroon-accent);
     border-radius: 10px;
@@ -140,14 +142,14 @@ main .about-me .headshot {
     height: auto;
 }
 
+/* About Me card H2 styles */
 main .about-me h2 {
-    font-size: 250%;
     width: fit-content;
 }
 
+/* Container styles for gray background behind About Me bio */
 main .gray-background {
     background-color: #454545;
-    color: #fff;
     padding: 30px;
     border-radius: 12px;
     max-width: 1000px;
@@ -155,55 +157,66 @@ main .gray-background {
     margin: 0 auto;
 }
 
+/* About Me bio paragraph styles */
 main .gray-background p {
-    margin-bottom: 20px;
+    color: #fff;
     font-size: 110%;
 }
 
-main .gray-background p:last-child {
-    margin-bottom: 0px;
+/* Adds extra margin offset on first paragraph to separate two paragraphs */
+main .gray-background p:first-child {
+    margin-bottom: 20px;
 }
 
-main .selected-works {
+/* Selected Works H2 styles */
+main h2.selected-works {
     max-width: 1000px;
     width: 100%;
-    margin: 20px auto;
+    margin: 40px auto 20px auto;
 }
 
+/* Selected Works grid properties and styles */
 main .works-grid {
     display: grid;
     justify-content: center;
     grid-template: repeat(3, auto) / 470px 470px;
     column-gap: 60px;
     row-gap: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
+/* Selected Works grid inner div properties and styles */
 main .works-grid .card {
     height: 235px;
+    /* Background properties applying across all divs */
     background-repeat: no-repeat;
     background-size: cover;
     border: 5px solid var(--purple-accent);
     border-radius: 5px;
 }
 
+/* Sets divs wrapping H3s and paragraphs inside .card divs to height 100% so anchor tags cover entire displaying background image */
 main .works-grid .card div {
     height: 100%;
 }
 
+/* Removes underline on H3s and paragraphs wrapped by anchor tags */
 main .works-grid .card a {
    text-decoration: none;
 }
 
+/* Spacing and font size for H3s inside Selected Works grid */
 main .works-grid h3 {
     font-size: 130%;
     padding: 15px;
 }
 
+/* Spacing for paragraphs inside Selected Works grid */
 main .works-grid p {
     padding: 0 15px 15px;
 }
 
+/* Styles for H3s and paragraphs inside Selected Works grid, including Opacity 0 so they only display on hover */
 main .works-grid p,
 main .works-grid h3 {
     opacity: 0;
@@ -212,29 +225,36 @@ main .works-grid h3 {
     transition: opacity 0.75s;
 }
 
+/* Hover effect for H3s and paragraphs to display as specified by transition property above */
 main .works-grid div:hover p, 
 main .works-grid div:hover h3 {
     opacity: 100%;
 }
 
+/* Specific styles for featured work sample, including spanning both columns for larger display and custom height setting */
 main .works-grid #mfgs {
     grid-column: 1 / span 2;
+    /* Overwriting height property for featured work sample */
     height: 400px;
     background-image: url('./../Images/MFGS-Leadership-1000.png');
 }
 
+/* Sets background image for FNN page work sample */
 main .works-grid #fnn {
     background-image: url('./../Images/FNN-Partners-470.png');
 }
 
+/* Sets background image for CSS Snippets page work sample */
 main .works-grid #css-snippet {
     background-image: url('./../Images/CSS-Snippet-470.png');
 }
 
+/* Sets background image for GovForward page work sample */
 main .works-grid #govforward {
     background-image: url('./../Images/GovForward-470.png');
 }
 
+/* Sets background image for 2020 Compendium page work sample */
 main .works-grid #compendium {
     background-image: url('./../Images/2020-Compendium-470.png');
 }
@@ -246,13 +266,16 @@ footer {
     color: #fff;
 }
 
+/* Footer H2 styles */
 footer h2 {
+    font-size: 200%;
     max-width: 1270px;
     width: 100%;
     padding-top: 20px;
     margin: 0 auto 10px auto;
 }
 
+/* Footer contact info flexbox declaration + properties */
 footer .contact-info {
     display: flex;
     flex-direction: row;
@@ -262,30 +285,35 @@ footer .contact-info {
     margin: 0 auto;
 }
 
+/* Overwriting default font color for Footer anchor tags */
 footer .contact-info a {
     color: #fff;
 }
 
-/* Individual contact boxes */
+/* Individual contact boxes styles */
 footer .contact-info div {
     margin-right: 100px;
     font-size: 130%;
 }
 
+/* Removing margin right on last contact box so that spacing only exists between boxes */
 footer .contact-info div:last-child {
     margin-right: 0px;
 }
 
+/* Sets transition on contact box anchors tags and icons (via Font Awesome) */
 footer .contact-info div a,
 footer .contact-info div i {
     transition: color 0.25s;
 }
 
+/* Hover effect for contact box anchor tags and icons */
 footer .contact-info div:hover a,
 footer .contact-info div:hover i {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* Pseudo element for phone icon (via Font Awesome) -- implemented with pseudo element for ease of assigning hover effects to anchor tags and icon tags */
 footer .contact-info #phone::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -293,19 +321,24 @@ footer .contact-info #phone::before {
     padding-right: 10px;
 }
 
+/* Font Awesome icon styles */
 footer .contact-info .fab,
 footer .contact-info .far {
     padding-right: 10px;
     font-size: 120%;
 }
 
+/* Footer inspirational ending note styles */
 footer .ending-note {
     text-align: center;
     font-size: 120%;
     margin: 40px auto 30px auto;
 }
 
+/* Footer copyright styles */
 footer .copyright {
     text-align: center;
     padding-bottom: 30px;
 }
+
+/* Start media query section */
