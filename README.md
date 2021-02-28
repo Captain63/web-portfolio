@@ -4,4 +4,4 @@ Initial buildout of Stephen A. Roddewig Portfolio Page. Developer leveraged seve
 
 Finished application: https://captain63.github.io/homework2-portfolio-homepage/
 
-Screenshot of finished application: (./stephen-roddewig-portfolio-finished-page.PNG)
+Screenshot of finished application: (https://github.com/Captain63/homework2-portfolio-homepage/blob/main/stephen-roddewig-portfolio-finished-page.PNG)
