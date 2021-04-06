@@ -17,7 +17,7 @@ Initial buildout of Stephen A. Roddewig Portfolio Page. Developer leveraged seve
 </ul>
 
 ## Live Webpage
-https://captain63.github.io/homework2-portfolio-homepage/
+https://captain63.github.io/web-portfolio/ 
 
 ## Screenshot of Webpage
 ![Screenshot of nav bar and hero image](./Assets/Images/stephen-roddewig-portfolio-finished-page.PNG)
