@@ -135,6 +135,7 @@ main .about-me {
     margin: -200px auto 30px auto;
     max-width: 1000px;
     width: 100%;
+    padding-top: 10px;
 }
 
 /* Headshot styles */
@@ -493,9 +494,7 @@ footer .copyright {
     /* Sets nav lis to display vertically and removes existing spacing and text alignment */
     nav .link {
         display: block;
-        /* margin-right: 0px; */
         text-align: left;
-        /* margin-bottom: 0px; */
         padding: 10px 0 10px 30px;
         border-bottom: 2px solid #303030;
     }
