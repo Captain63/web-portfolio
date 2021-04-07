@@ -80,12 +80,12 @@ nav .link {
     display: inline-block;
     text-align: center;
     font-size: 125%;
-    margin-right: 25px;
+    padding-right: 25px;
 }
 
 /* Increases right margin on final list item for more offset from page edge */
 nav .link:last-child {
-    margin-right: 50px;
+    padding-right: 50px;
 }
 
 /* Setting styles and transition on link class and overwriting anchor text native styles */
@@ -410,7 +410,7 @@ footer .copyright {
 @media only screen and (max-width: 800px) {
     /* Adds top margin to nav lis to separate from first row after flex wrap */
     nav .link {
-        margin-top: 10px;
+        padding-top: 10px;
     }
     
     /* Reduces height of figure to keep background image more centered */
@@ -458,6 +458,69 @@ footer .copyright {
     }
 }
 
+@media only screen and (max-width: 725px) {
+    /* Makes title card flush with top of viewport */
+    header {
+        padding: 0px;
+    }
+    
+    /* Sets title card display to grid so that menu icon can be positioned with title and tagline */
+    header .nav-title {
+        max-width: 725px;
+        padding-top: 50px;
+        display: grid;
+        grid-template: auto auto / auto 50px;
+        grid-column-gap: 15px;
+    }
+
+    /* Sets menu icon to display and sets styles */
+    header .nav-title i {
+        display: block;
+        font-size: 300%;
+        color: #fff;
+        margin-top: 8px;
+        transition: color 0.25s;
+    }
+
+    /* Hides nav so that menu.js event listener can toggle with .menu-open class */
+    nav {
+        display: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* Sets nav lis to display vertically and removes existing spacing and text alignment */
+    nav .link {
+        display: block;
+        /* margin-right: 0px; */
+        text-align: left;
+        /* margin-bottom: 0px; */
+        padding: 10px 0 10px 30px;
+        border-bottom: 2px solid #303030;
+    }
+
+    nav .link, nav .link a {
+        text-decoration: none;
+    }
+
+    /* Removes margin on last nav li */
+    nav .link:last-child {
+        margin-right: 0px;
+        border-bottom: none;
+    }
+
+    /* Class toggled by menu.js event listener to display mobile dropdown menu */
+    .menu-open {
+        display: block;
+    }
+
+    /* Class toggled by menu.js event listener to show mobile menu icon has been clicked */
+    .menu-icon-active {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+}
+
 @media only screen and (max-width: 575px) {
     /* Reduces height of figure to keep background image more centered */
     figure {
@@ -492,57 +555,6 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 460px) {
-    /* Makes title card flush with top of viewport */
-    header {
-        padding: 0px;
-    }
-    
-    /* Sets title card display to grid so that menu icon can be positioned with title and tagline */
-    header .nav-title {
-        max-width: 460px;
-        padding-top: 50px;
-        display: grid;
-        grid-template: auto auto / auto 50px;
-    }
-
-    /* Sets menu icon to display and sets styles */
-    header .nav-title i {
-        display: block;
-        font-size: 300%;
-        color: #fff;
-        margin-top: 8px;
-        transition: color 0.25s;
-    }
-
-    /* Hides nav so that menu.js event listener can toggle with .menu-open class */
-    nav {
-        display: none;
-        margin-top: 0px;
-    }
-
-    /* Sets nav lis to display vertically and removes existing spacing and text alignment */
-    nav .link {
-        display: block;
-        margin-right: 0px;
-        text-align: left;
-        margin-bottom: 10px;
-    }
-
-    /* Removes margin on last nav li */
-    nav .link:last-child {
-        margin-right: 0px;
-    }
-
-    /* Class toggled by menu.js event listener to display mobile dropdown menu */
-    .menu-open {
-        display: block;
-    }
-
-    /* Class toggled by menu.js event listener to show mobile menu icon has been clicked */
-    .menu-icon-active {
-        color: rgba(255, 255, 255, 0.5) !important;
-    }
-
     /* Reduce height of figure to keep background image more centered */
     figure {
         height: 250px;
