@@ -181,89 +181,132 @@ main h2.selected-works {
     margin: 40px auto 20px auto;
 }
 
-/* Selected Works grid properties and styles */
 main .works-grid {
     display: grid;
     justify-content: center;
-    grid-template: repeat(3, auto) / 470px 470px;
+    grid-template: repeat(3, auto) / 475px 475px;
+    column-gap: 50px;
+    row-gap: 50px;
+    padding-bottom: 60px;
+}
+
+main .works-grid #featured {
+    grid-column: 1 / span 2;
+}
+
+main .card {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+}
+
+main .card img {
+    border: 5px solid var(--purple-accent);
+    border-radius: 5px;
+    width: 100%;
+}
+
+main .card-text {
+    padding: 10px 25px 25px;
+}
+
+main .card-text h3 {
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+
+main .card-text a {
+    opacity: 100%;
+    transition: opacity 0.25s;
+}
+
+main .card-text a:hover {
+    opacity: 50%;
+}
+
+/* Selected Works grid properties and styles */
+/* main .works-grid {
+    display: grid;
+    justify-content: center;
+    grid-template: repeat(6, auto) / 470px 470px;
     column-gap: 60px;
     row-gap: 40px;
     padding-bottom: 60px;
 }
 
 /* Selected Works grid inner div properties and styles */
-main .works-grid .card {
-    height: 235px;
+/* main .works-grid .card {
+    height: 235px; */
     /* Background properties applying across all divs */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     border: 5px solid var(--purple-accent);
     border-radius: 5px;
-}
+} */
 
 /* Sets divs wrapping H3s and paragraphs inside .card divs to height 100% so anchor tags cover entire displaying background image */
-main .works-grid .card div {
+/* main .works-grid .card div {
     height: 100%;
-}
+} */
 
 /* Removes underline on H3s and paragraphs wrapped by anchor tags */
-main .works-grid .card a {
+/* main .works-grid .card a {
    text-decoration: none;
-}
+} */
 
 /* Spacing and font size for H3s inside Selected Works grid */
-main .works-grid h3 {
+/* main .works-grid h3 {
     font-size: 130%;
     padding: 15px;
-}
+} */
 
 /* Spacing for paragraphs inside Selected Works grid */
-main .works-grid p {
+/* main .works-grid p {
     padding: 0 15px 15px;
-}
+} */
 
 /* Styles for H3s and paragraphs inside Selected Works grid, including Opacity 0 so they only display on hover */
-main .works-grid p,
+/* main .works-grid p,
 main .works-grid h3 {
     opacity: 0;
     color: var(--purple-accent);
     background-color: rgba(255, 255, 255, 0.9);
     transition: opacity 0.75s;
-}
+} */
 
 /* Hover effect for H3s and paragraphs to display as specified by transition property above */
-main .works-grid div:hover p, 
+/* main .works-grid div:hover p, 
 main .works-grid div:hover h3 {
     opacity: 100%;
-}
+} */
 
 /* Specific styles for featured work sample, including spanning both columns for larger display and custom height setting */
-main .works-grid #mfgs {
-    grid-column: 1 / span 2;
+/* main .works-grid #mfgs {
+    grid-column: 1 / span 2; 
     /* Overwriting height property for featured work sample */
-    height: 400px;
+    /* height: 400px;
     background-image: url('./../Images/MFGS-Leadership-1000.png');
-}
+} */
 
 /* Sets background image for FNN page work sample */
-main .works-grid #fnn {
+/* main .works-grid #fnn {
     background-image: url('./../Images/FNN-Partners-470.png');
-}
+} */
 
 /* Sets background image for CSS Snippets page work sample */
-main .works-grid #css-snippet {
+/* main .works-grid #css-snippet {
     background-image: url('./../Images/CSS-Snippet-470.png');
-}
+} */
 
 /* Sets background image for GovForward page work sample */
-main .works-grid #govforward {
+/* main .works-grid #govforward {
     background-image: url('./../Images/GovForward-470.png');
-}
+} */
 
 /* Sets background image for 2020 Compendium page work sample */
-main .works-grid #compendium {
+/* main .works-grid #compendium {
     background-image: url('./../Images/2020-Compendium-470.png');
-}
+} */
 /* END Main content styles */
 
 /* Footer styles */
@@ -365,29 +408,6 @@ footer .copyright {
     /* Reduces padding on sides of Main */
     main {
         padding: 65px 30px 0 30px;
-    }
-
-    /* Keeps H2 aligned with Selected Works grid */
-    main h2.selected-works {
-        max-width: 700px;
-    }
-
-    /* Selected Works grid column sizing and spacing adjustment */
-    main .works-grid {
-        grid-template-columns: 320px 320px;
-        column-gap: 60px;
-        row-gap: 40px;
-    }
-
-    /* Centers background images for Selected Works cards and sets height */
-    main .works-grid .card {
-        background-position: center;
-        height: 200px;
-    }
-
-    /* Special height setting for featured work sample */
-    main .works-grid #mfgs {
-        height: 280px;
     }
 
     /* Centers Footer H2 */
