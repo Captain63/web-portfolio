@@ -216,12 +216,18 @@ main .card-text h3 {
 }
 
 main .card-text a {
+    font-size: 120%;
     opacity: 100%;
     transition: opacity 0.25s;
+    text-decoration: none;
 }
 
 main .card-text a:hover {
     opacity: 50%;
+}
+
+main .card-text li {
+    padding-bottom: 5px;
 }
 
 /* Selected Works grid properties and styles */
@@ -320,7 +326,7 @@ footer h2 {
     font-size: 200%;
     max-width: 1270px;
     width: 100%;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
     margin: 0 auto 10px auto;
 }
 
@@ -410,9 +416,27 @@ footer .copyright {
         padding: 65px 30px 0 30px;
     }
 
+    main h2.selected-works {
+        max-width: 750px;
+    }
+
+    main .works-grid {
+        display: grid;
+        justify-content: center;
+        grid-template: repeat(5, auto) / 750px;
+        column-gap: 50px;
+        row-gap: 50px;
+        padding: 0 0 60px;
+    }
+    
+    main .works-grid #featured {
+        grid-column: 1 / span 1;
+    }    
+
     /* Centers Footer H2 */
     footer h2 {
         text-align: center;
+        padding-left: 0;
     }
 
     /* Sets contact boxes to column and centers boxes */
@@ -425,6 +449,12 @@ footer .copyright {
     footer .contact-info div {
         margin-right: 0px;
         margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    main .works-grid {
+        grid-template-columns: auto;
     }
 }
 
@@ -441,7 +471,7 @@ footer .copyright {
     
     /* Removes side padding on Main */
     main {
-        padding: 65px 0 0 0;
+        padding: 65px 0 0;
     }
 
     /* Adjusts About Me grid to one column layout */
@@ -462,21 +492,15 @@ footer .copyright {
         border-radius: 0px;
     }
 
+    /* Adds padding around work samples grid to keep columns from spanning entire viewport */
+    main .grid-padding {
+        padding: 0 30px;
+    }
+
     /* Keeps H2 aligned with Selected Works grid */
     main h2.selected-works {
-        max-width: 500px;
-    }
-
-    /* Sets Selected Works grid to single column layout and reduces column width */
-    main .works-grid {
-        grid-template: repeat(5, auto) / 500px;
-    }
-
-    /* Special height setting for featured work sample and removes two column span */
-    main .works-grid #mfgs {
-        height: 200px;
-        grid-column: 1 / span 1;
-    }
+        max-width: 100%;
+    }    
 }
 
 @media only screen and (max-width: 725px) {
@@ -556,20 +580,9 @@ footer .copyright {
         font-size: 200%;
     }
 
-    /* Keeps H2 aligned with Selected Works grid and reduces font size for smaller screens */
+    /* Reduces font size for smaller screens */
     main h2.selected-works {
         font-size: 200%;
-        max-width: 400px;
-    }
-
-    /* Reduces column width of Selected Works grid */
-    main .works-grid {
-        grid-template-columns: 400px;
-    }
-
-    /* Adjusts height of Selected Works card -- important added to override #mfgs selector */
-    main .works-grid .card {
-        height: 250px !important;
     }
 }
 
@@ -589,6 +602,10 @@ footer .copyright {
         font-size: 100%;
     }
 
+    main .grid-padding {
+        padding: 0 15px;
+    }
+
     /* Centers H2 */
     main h2.selected-works {
         text-align: center;
@@ -597,11 +614,6 @@ footer .copyright {
     /* Sets Selected Works grid width to 100% of viewport -- removing fixed widths from earlier queries */
     main .works-grid {
         grid-template-columns: 100%;
-    }
-
-    /* Adds more height to Selected Works grid cards than normally provided by the content inside the divs */
-    main .works-grid .card {
-        height: 120% !important;
     }
 
     /* Reduces font-size of contact info boxes and centers text */
