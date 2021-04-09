@@ -105,13 +105,8 @@ nav .link:hover a {
 /* END Header styles */
 
 /* Main banner styles */
-figure {
-    background-image: url("./../Images/lighthouse-banner.jpg");
-    background-position: 25% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
+picture img {
     width: 100%;
-    height: 500px;
 }
 
 /* Main content styles */
@@ -119,7 +114,7 @@ main {
     padding: 65px 50px 0 50px;
     background: linear-gradient(180deg, var(--background), #4770da);
     height: 100%;
-    margin: 0;
+    margin: -10px 0 0;
     background-repeat: no-repeat;
     /* Makes gradient background follow viewport scrolling */
     background-attachment: fixed;
@@ -130,7 +125,7 @@ main .about-me {
     display: grid;
     grid-template: auto / 250px auto;
     justify-items: start;
-    grid-column-gap: 30px;
+    column-gap: 30px;
     align-items: end;
     margin: -200px auto 30px auto;
     max-width: 1000px;
@@ -414,11 +409,6 @@ footer .copyright {
         padding-top: 10px;
     }
     
-    /* Reduces height of figure to keep background image more centered */
-    figure {
-        height: 400px;
-    }
-    
     /* Removes side padding on Main */
     main {
         padding: 65px 0 0 0;
@@ -471,7 +461,7 @@ footer .copyright {
         padding-top: 50px;
         display: grid;
         grid-template: auto auto / auto 50px;
-        grid-column-gap: 15px;
+        column-gap: 15px;
     }
 
     /* Sets menu icon to display and sets styles */
@@ -521,11 +511,6 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 575px) {
-    /* Reduces height of figure to keep background image more centered */
-    figure {
-        height: 300px;
-    }
-
     /* Reduces headshot size for smaller screens */
     main .about-me .headshot {
         max-width: 200px;
@@ -554,12 +539,7 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 460px) {
-    /* Reduce height of figure to keep background image more centered */
-    figure {
-        height: 250px;
-    }
-
-    /* Reduce negative margin on About Me grid to account for smaller figure */
+    /* Reduce negative margin on About Me grid to account for smaller banner */
     main .about-me {
         margin-top: -150px;
     }
@@ -597,12 +577,7 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 400px) {
-    /* Reduce height of figure to keep background image more centered */
-    figure {
-        height: 200px;
-    }
-
-    /* Reduce offset on About Me grid to account for lower height of figure */
+    /* Reduce offset on About Me grid to account for lower height of banner */
     main .about-me {
         margin-top: -140px;
     }
