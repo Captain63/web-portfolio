@@ -104,7 +104,7 @@ nav .link:hover a {
 }
 /* END Header styles */
 
-/* Main banner styles */
+/* Banner styles */
 picture img {
     width: 100%;
 }
@@ -199,6 +199,14 @@ main .card img {
     border: 5px solid var(--purple-accent);
     border-radius: 5px;
     width: 100%;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+main .card img:hover {
+    box-shadow: inset 0px 0px 8px 
+    rgb(255, 255, 255), 
+    0 0 30px 
+    rgba(255, 255, 255, 1);
 }
 
 main .card-text {
