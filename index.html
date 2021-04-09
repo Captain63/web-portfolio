@@ -58,8 +58,13 @@
             </nav>
         </header>
 
-        <figure>
-        </figure>
+        <!-- Allows browser to choose smaller images for smaller file sizes -->
+        <picture>
+            <source srcset="./Assets/Images/lighthouse-banner-400px.jpg" media="(max-width: 400px)">
+            <source srcset="./Assets/Images/lighthouse-banner-800px.jpg" media="(max-width: 800px)">
+            <source srcset="./Assets/Images/lighthouse-banner-1200px.jpg" media="(max-width: 1200px)">
+            <img src="./Assets/Images/lighthouse-banner.jpg" alt="Lighthouse banner">
+        </picture>
 
         <!-- Main for bio and work samples -->
         <main>
