@@ -176,89 +176,138 @@ main h2.selected-works {
     margin: 40px auto 20px auto;
 }
 
-/* Selected Works grid properties and styles */
 main .works-grid {
     display: grid;
     justify-content: center;
-    grid-template: repeat(3, auto) / 470px 470px;
+    grid-template: repeat(3, auto) / 475px 475px;
+    column-gap: 50px;
+    row-gap: 50px;
+    padding-bottom: 60px;
+}
+
+main .works-grid #featured {
+    grid-column: 1 / span 2;
+}
+
+main .card {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+}
+
+main .card img {
+    border: 5px solid var(--purple-accent);
+    border-radius: 5px;
+    width: 100%;
+}
+
+main .card-text {
+    padding: 10px 25px 25px;
+}
+
+main .card-text h3 {
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+
+main .card-text a {
+    font-size: 120%;
+    opacity: 100%;
+    transition: opacity 0.25s;
+    text-decoration: none;
+}
+
+main .card-text a:hover {
+    opacity: 50%;
+}
+
+main .card-text li {
+    padding-bottom: 5px;
+}
+
+/* Selected Works grid properties and styles */
+/* main .works-grid {
+    display: grid;
+    justify-content: center;
+    grid-template: repeat(6, auto) / 470px 470px;
     column-gap: 60px;
     row-gap: 40px;
     padding-bottom: 60px;
 }
 
 /* Selected Works grid inner div properties and styles */
-main .works-grid .card {
-    height: 235px;
+/* main .works-grid .card {
+    height: 235px; */
     /* Background properties applying across all divs */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     border: 5px solid var(--purple-accent);
     border-radius: 5px;
-}
+} */
 
 /* Sets divs wrapping H3s and paragraphs inside .card divs to height 100% so anchor tags cover entire displaying background image */
-main .works-grid .card div {
+/* main .works-grid .card div {
     height: 100%;
-}
+} */
 
 /* Removes underline on H3s and paragraphs wrapped by anchor tags */
-main .works-grid .card a {
+/* main .works-grid .card a {
    text-decoration: none;
-}
+} */
 
 /* Spacing and font size for H3s inside Selected Works grid */
-main .works-grid h3 {
+/* main .works-grid h3 {
     font-size: 130%;
     padding: 15px;
-}
+} */
 
 /* Spacing for paragraphs inside Selected Works grid */
-main .works-grid p {
+/* main .works-grid p {
     padding: 0 15px 15px;
-}
+} */
 
 /* Styles for H3s and paragraphs inside Selected Works grid, including Opacity 0 so they only display on hover */
-main .works-grid p,
+/* main .works-grid p,
 main .works-grid h3 {
     opacity: 0;
     color: var(--purple-accent);
     background-color: rgba(255, 255, 255, 0.9);
     transition: opacity 0.75s;
-}
+} */
 
 /* Hover effect for H3s and paragraphs to display as specified by transition property above */
-main .works-grid div:hover p, 
+/* main .works-grid div:hover p, 
 main .works-grid div:hover h3 {
     opacity: 100%;
-}
+} */
 
 /* Specific styles for featured work sample, including spanning both columns for larger display and custom height setting */
-main .works-grid #mfgs {
-    grid-column: 1 / span 2;
+/* main .works-grid #mfgs {
+    grid-column: 1 / span 2; 
     /* Overwriting height property for featured work sample */
-    height: 400px;
+    /* height: 400px;
     background-image: url('./../Images/MFGS-Leadership-1000.png');
-}
+} */
 
 /* Sets background image for FNN page work sample */
-main .works-grid #fnn {
+/* main .works-grid #fnn {
     background-image: url('./../Images/FNN-Partners-470.png');
-}
+} */
 
 /* Sets background image for CSS Snippets page work sample */
-main .works-grid #css-snippet {
+/* main .works-grid #css-snippet {
     background-image: url('./../Images/CSS-Snippet-470.png');
-}
+} */
 
 /* Sets background image for GovForward page work sample */
-main .works-grid #govforward {
+/* main .works-grid #govforward {
     background-image: url('./../Images/GovForward-470.png');
-}
+} */
 
 /* Sets background image for 2020 Compendium page work sample */
-main .works-grid #compendium {
+/* main .works-grid #compendium {
     background-image: url('./../Images/2020-Compendium-470.png');
-}
+} */
 /* END Main content styles */
 
 /* Footer styles */
@@ -272,7 +321,7 @@ footer h2 {
     font-size: 200%;
     max-width: 1270px;
     width: 100%;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
     margin: 0 auto 10px auto;
 }
 
@@ -362,32 +411,27 @@ footer .copyright {
         padding: 65px 30px 0 30px;
     }
 
-    /* Keeps H2 aligned with Selected Works grid */
     main h2.selected-works {
-        max-width: 700px;
+        max-width: 750px;
     }
 
-    /* Selected Works grid column sizing and spacing adjustment */
     main .works-grid {
-        grid-template-columns: 320px 320px;
-        column-gap: 60px;
-        row-gap: 40px;
+        display: grid;
+        justify-content: center;
+        grid-template: repeat(5, auto) / 750px;
+        column-gap: 50px;
+        row-gap: 50px;
+        padding: 0 0 60px;
     }
-
-    /* Centers background images for Selected Works cards and sets height */
-    main .works-grid .card {
-        background-position: center;
-        height: 200px;
-    }
-
-    /* Special height setting for featured work sample */
-    main .works-grid #mfgs {
-        height: 280px;
-    }
+    
+    main .works-grid #featured {
+        grid-column: 1 / span 1;
+    }    
 
     /* Centers Footer H2 */
     footer h2 {
         text-align: center;
+        padding-left: 0;
     }
 
     /* Sets contact boxes to column and centers boxes */
@@ -403,6 +447,12 @@ footer .copyright {
     }
 }
 
+@media only screen and (max-width: 850px) {
+    main .works-grid {
+        grid-template-columns: auto;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     /* Adds top margin to nav lis to separate from first row after flex wrap */
     nav .link {
@@ -411,7 +461,7 @@ footer .copyright {
     
     /* Removes side padding on Main */
     main {
-        padding: 65px 0 0 0;
+        padding: 65px 0 0;
     }
 
     /* Adjusts About Me grid to one column layout */
@@ -432,21 +482,15 @@ footer .copyright {
         border-radius: 0px;
     }
 
+    /* Adds padding around work samples grid to keep columns from spanning entire viewport */
+    main .grid-padding {
+        padding: 0 30px;
+    }
+
     /* Keeps H2 aligned with Selected Works grid */
     main h2.selected-works {
-        max-width: 500px;
-    }
-
-    /* Sets Selected Works grid to single column layout and reduces column width */
-    main .works-grid {
-        grid-template: repeat(5, auto) / 500px;
-    }
-
-    /* Special height setting for featured work sample and removes two column span */
-    main .works-grid #mfgs {
-        height: 200px;
-        grid-column: 1 / span 1;
-    }
+        max-width: 100%;
+    }    
 }
 
 @media only screen and (max-width: 725px) {
@@ -521,20 +565,9 @@ footer .copyright {
         font-size: 200%;
     }
 
-    /* Keeps H2 aligned with Selected Works grid and reduces font size for smaller screens */
+    /* Reduces font size for smaller screens */
     main h2.selected-works {
         font-size: 200%;
-        max-width: 400px;
-    }
-
-    /* Reduces column width of Selected Works grid */
-    main .works-grid {
-        grid-template-columns: 400px;
-    }
-
-    /* Adjusts height of Selected Works card -- important added to override #mfgs selector */
-    main .works-grid .card {
-        height: 250px !important;
     }
 }
 
@@ -549,6 +582,10 @@ footer .copyright {
         font-size: 100%;
     }
 
+    main .grid-padding {
+        padding: 0 15px;
+    }
+
     /* Centers H2 */
     main h2.selected-works {
         text-align: center;
@@ -557,11 +594,6 @@ footer .copyright {
     /* Sets Selected Works grid width to 100% of viewport -- removing fixed widths from earlier queries */
     main .works-grid {
         grid-template-columns: 100%;
-    }
-
-    /* Adds more height to Selected Works grid cards than normally provided by the content inside the divs */
-    main .works-grid .card {
-        height: 120% !important;
     }
 
     /* Reduces font-size of contact info boxes and centers text */
