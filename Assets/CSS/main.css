@@ -127,10 +127,10 @@ main .about-me {
     justify-items: start;
     column-gap: 30px;
     align-items: end;
-    margin: -200px auto 30px auto;
+    margin: -450px auto 0px auto;
     max-width: 1000px;
     width: 100%;
-    padding-top: 10px;
+    padding-left: 30px;
 }
 
 /* Headshot styles */
@@ -145,6 +145,7 @@ main .about-me .headshot {
 
 /* About Me card H2 styles */
 main .about-me h2 {
+    color: #fff;
     width: fit-content;
 }
 
@@ -372,6 +373,12 @@ footer .copyright {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    main .about-me {
+        margin-top: -395px;
+    }
+}
+
 @media only screen and (max-width: 850px) {
     main .works-grid {
         grid-template-columns: auto;
@@ -395,11 +402,14 @@ footer .copyright {
         justify-content: center;
         justify-items: center;
         margin-bottom: 20px;
+        margin-top: -200px;
+        padding-left: 0;
     }
 
     /* Adds top margin now that H2 is positioned beneath headshot */
     main .about-me h2 {
         margin-top: 20px;
+        color: #000;
     }
 
     /* Removes border rounding now that container stretches to both sides of viewport */
@@ -476,6 +486,10 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 575px) {
+    main .about-me {
+        margin-top: -170px;
+    }
+
     /* Reduces headshot size for smaller screens */
     main .about-me .headshot {
         max-width: 200px;
