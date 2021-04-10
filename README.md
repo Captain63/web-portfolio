@@ -1,7 +1,7 @@
-# Stephen A. Roddewig Web Applications Portfolio
+# Web Applications Portfolio
 
 ## Project Overview
-Initial buildout of Stephen A. Roddewig Portfolio Page. Developer leveraged several responsive CSS methods, including flexbox for Header and Footer layout and CSS grid to style Selected Works grid with media queries to adapt layout to smaller screen sizes. In addition, developer leverager custom JS scrollCursor function to add interactive scrolling to different sections of DOM based on link clicked and custom JS to create mobile dropdown menu. Icons deployed on page are pulled from Font Awesome library, and fonts are pulled from Google Fonts library.
+Stephen A. Roddewig portfolio buildout 2.0. Developer leveraged several responsive CSS methods, including flexbox for Header and Footer layout and CSS grid to style Selected Works grid with media queries to adapt layout to smaller screen sizes. In addition, developer leverager custom JS scrollCursor function to add interactive scrolling to different sections of DOM based on link clicked and custom JS to create mobile dropdown menu. Icons deployed on page are pulled from Font Awesome library, and fonts are pulled from Google Fonts library.
 
 ### Technologies Used:
 <ul>
