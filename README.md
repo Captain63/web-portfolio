@@ -17,7 +17,7 @@ Stephen A. Roddewig portfolio buildout 2.0. Developer leveraged several responsi
 </ul>
 
 ## Live Webpage
-https://captain63.github.io/web-portfolio/ 
+https://portfolio.stephentechblog.com/ 
 
 ## Screenshot of Webpage
 ![Screenshot of nav bar and hero image](./Assets/Images/stephen-roddewig-portfolio-finished-page.PNG)
