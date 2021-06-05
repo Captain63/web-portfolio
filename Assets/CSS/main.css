@@ -55,6 +55,7 @@ header .nav-title {
     border-radius: 0 3px 3px 0;
     max-width: 400px;
     width: 100%;
+    z-index: 5;
 }
 
 /* Mobile menu icon for small screen sizes -- hidden */
@@ -73,6 +74,7 @@ header .tagline {
 nav {
     height: auto;
     width: fit-content;
+    z-index: 0;
 }
 
 /* Sets list items to display side by side */
@@ -218,6 +220,16 @@ main .card img:hover {
 /* Styles for text area beneath screenshot */
 main .card-text {
     padding: 10px 25px 25px;
+}
+
+/* Project description styles */
+main .card-text p {
+    margin-bottom: 15px;
+}
+
+/* Special width for featured card description */
+main #featured .card-text p {
+    max-width: 700px;
 }
 
 main .card-text h3 {
@@ -452,12 +464,12 @@ footer .copyright {
         transition: color 0.25s;
     }
 
-    /* Hides nav so that menu.js event listener can toggle with .menu-open class */
+    /* Sets position to relative to hide above window and uses transition for animated dropdown */
     nav {
-        display: none;
+        position: relative;
         width: 100%;
         margin-left: 0;
-        margin-top: 0;
+        transition: top 0.5s ease-in-out, margin-top 0.5s ease-in-out;
     }
 
     /* Sets nav lis to display vertically and removes existing spacing and text alignment */
@@ -476,7 +488,9 @@ footer .copyright {
 
     /* Class toggled by menu.js event listener to display mobile dropdown menu */
     .menu-open {
-        display: block;
+        /* Assigned weight important to overrule inline styling from script.js */
+        top: 0 !important;
+        margin-top: 0px !important;
     }
 
     /* Class toggled by menu.js event listener to show mobile menu icon has been clicked */
