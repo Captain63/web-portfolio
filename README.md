@@ -29,4 +29,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 [View the full license](./LICENSE).
 
 ## Screenshots
-![Screenshot of nav bar and hero image](./Assets/Images/stephen-roddewig-portfolio-finished-page.PNG)
+![Screenshot of About Me section and hero image](./screenshots/about-me.png)
+
+![Screenshot of Work Samples grid](./screenshots/selected-works.png)
