@@ -33,7 +33,7 @@ const navTitleHeight = () => {
         const heightOffset = navTitle.clientHeight;
 
         // Uses negative margin and top styles to hide mobile menu behind Title header until dropped down
-        menu.style.marginTop = `${(-heightOffset)}px`;
+        menu.style.marginTop = `${(-heightOffset - 40)}px`;
         menu.style.top = `${(-heightOffset)}px`;
     }
 }
