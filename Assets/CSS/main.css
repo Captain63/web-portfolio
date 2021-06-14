@@ -129,7 +129,7 @@ main .about-me {
     justify-items: start;
     column-gap: 30px;
     align-items: end;
-    margin: -450px auto 0px auto;
+    margin: -455px auto 0px auto;
     max-width: 1000px;
     width: 100%;
     padding-left: 30px;
@@ -161,15 +161,29 @@ main .gray-background {
     margin: 0 auto;
 }
 
+/* About Me heading styles */
+main .gray-background h3 {
+    font-size: 150%;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
 /* About Me bio paragraph styles */
 main .gray-background p {
     color: #fff;
     font-size: 110%;
+    margin-bottom: 25px;
 }
 
-/* Adds extra margin offset on first paragraph to separate two paragraphs */
-main .gray-background p:first-child {
-    margin-bottom: 20px;
+/* Split skills lists */
+main .gray-background #skills span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Removes bottom margin for last paragraph under About Me */
+main .gray-background p:last-child {
+    margin-bottom: 0px;
 }
 
 /* Selected Works H2 styles */
@@ -382,12 +396,6 @@ footer .copyright {
     footer .contact-info div {
         margin-right: 0px;
         margin-top: 15px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    main .about-me {
-        margin-top: -395px;
     }
 }
 
