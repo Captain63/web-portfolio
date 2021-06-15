@@ -346,6 +346,7 @@ footer .ending-note {
 
 /* Footer copyright styles */
 footer .copyright {
+    font-size: 85%;
     text-align: center;
     padding-bottom: 30px;
 }
